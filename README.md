@@ -16,7 +16,9 @@ xsv sample 10 truc.csv | xsv table
 
 xsv select column1,column2 truc.csv > short_truc.csv
 
-xsv frequency -s City worldcitiespop.csv --limit 5
+# To count the number of values in a column:
+
+xsv frequency -s column table.csv --limit 5
 
 ## To count the number of unique values in one column
 
@@ -25,3 +27,7 @@ xsv frequency -s my_column my_file.csv --limit 0 | xsv count
 ## To count the number of unique values of each column
 
 xsv stats my_file.csv --cardinality | xsv select field,cardinality
+
+# To remove the rows containing a certain value from a table:
+
+xsv search -s column value-to-suppress table.csv -v > filtred-table.csv
