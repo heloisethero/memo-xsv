@@ -16,7 +16,7 @@ xsv sample 10 truc.csv | xsv table
 
 xsv select column1,column2 truc.csv > short_truc.csv
 
-## To count the number of values in a column:
+## To count the number of values in a column
 
 xsv frequency -s column table.csv --limit 5
 
@@ -28,6 +28,6 @@ xsv frequency -s my_column my_file.csv --limit 0 | xsv count
 
 xsv stats my_file.csv --cardinality | xsv select field,cardinality
 
-# To remove the rows containing a certain value from a table:
+## To remove the rows containing a certain value from a table:
 
 xsv search -s column value-to-suppress table.csv -v > filtred-table.csv
