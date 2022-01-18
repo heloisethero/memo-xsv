@@ -18,6 +18,10 @@ xsv sample 10 truc.csv | xsv table
 
 xsv select column1,column2 truc.csv > short_truc.csv
 
+## To sort a table based on a column
+
+xsv sort -s column_name table_name.csv > sorted_table_name.csv
+
 ## To count the number of values in a column
 
 xsv frequency -s column table.csv --limit 5
