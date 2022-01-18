@@ -14,6 +14,8 @@ xsv slice truc.csv -s 3173948 | xsv table
 
 xsv sample 10 truc.csv | xsv table
 
+## To select only certain columns from a table
+
 xsv select column1,column2 truc.csv > short_truc.csv
 
 ## To count the number of values in a column
