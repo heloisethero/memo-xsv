@@ -4,6 +4,8 @@ https://github.com/BurntSushi/xsv
 
 ## Basic tricks
 
+xsv table truc.csv
+
 xsv headers truc.csv
 
 xsv count truc.csv
@@ -34,6 +36,6 @@ xsv frequency -s my_column my_file.csv --limit 0 | xsv count
 
 xsv stats my_file.csv --cardinality | xsv select field,cardinality
 
-## To remove the rows containing a certain value from a table:
+## To remove the rows containing a certain value from a table
 
 xsv search -s column value-to-suppress table.csv -v > filtred-table.csv
