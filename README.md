@@ -39,3 +39,7 @@ xsv stats my_file.csv --cardinality | xsv select field,cardinality
 ## To remove the rows containing a certain value from a table
 
 xsv search -s column value-to-suppress table.csv -v > filtred-table.csv
+
+## To concatenate two tables with similar columns by adding their rows
+
+xsv cat rows table_1.csv table_2.csv > table_1+2.csv
